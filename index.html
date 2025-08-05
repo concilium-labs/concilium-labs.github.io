@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Concilium</title>
+<link href="tailwind.min.css" rel="stylesheet" />
+<link href="app.css" rel="stylesheet" />
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+<!-- Header -->
+<header class="navbar fixed w-full z-20">
+  <div class="max-w-8xl mx-auto flex justify-between items-center header-inner">
+    <a href="/">
+      <div class="flex items-center space-x-2">
+        <div class="w-6 h-6 bg-[#0ea5e9] rounded-full">
+          <img src="logo.png" alt="">
+        </div>
+        <span class="font-semibold text-lg navbar-logo-title">Concilium</span>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center space-x-8">
+      <a href="#" class="nav-link">Whitepaper</a>
+      <a href="https://github.com/concilium-labs" class="nav-link">GitHub</a>
+    </nav>
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+    <nav class="flex flex-col space-y-3 px-6 py-4">
+      <a href="#" class="nav-link">Whitepaper</a>
+      <a href="https://github.com/concilium-labs" class="nav-link">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero-bg text-center pt-32 pb-20 px-4">
+  <div class="mx-auto max-w-4xl">
+    <div class="w-24 h-24 mx-auto mb-4 bg-[#0ea5e9] rounded-full">
+      <img src="logo.png" alt="">
+    </div>
+    <h1 class="hero-title mb-4">Concilium</h1>
+    <p class="hero-subtitle mb-12">A new generation of distributed ledgers with a focus on horizontal scalability alongside preserving decentralization and security.</p>
+    <a href="#" class="inline-block px-8 py-4 text-white rounded shadow btn-gradient hover:scale-105 transform transition get-started-btn">Download whitepaper</a>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="max-w-7xl mx-auto py-16 px-4 grid grid-cols-1 sm:grid-cols-2 gap-6 features">
+  <div class="bg-white card p-6">
+    <div class="mb-3">
+      <div class="w-38 h-38 card-icon">🚀</div>
+    </div>
+    <h3 class="feature-title">Scalability</h3>
+    <p class="feature-text">The ability to process millions of transactions using horizontal scalability and the new Proof of Council consensus mechanism.</p>
+  </div>
+  <div class="bg-white card p-6">
+    <div class="mb-3">
+      <div class="w-38 h-38 card-icon">⚡️</div>
+    </div>
+    <h3 class="feature-title">Fast finality</h3>
+    <p class="feature-text">Transaction finalization in a single step with an average response time of less than 500 milliseconds, featuring a compensation mechanism.</p>
+  </div>
+  <div class="bg-white card p-6">
+    <div class="mb-3">
+      <div class="w-38 h-38 card-icon">🛠️</div>
+    </div>
+    <h3 class="feature-title">Minimal resource requirements</h3>
+    <p class="feature-text">No need for powerful hardware resources by nodes to participate in the network’s consensus.</p>
+  </div>
+  <div class="bg-white card p-6">
+    <div class="mb-3">
+      <div class="w-38 h-38 card-icon">💲</div>
+    </div>
+    <h3 class="feature-title">Very low fees</h3>
+    <p class="feature-text">Due to the lack of need for powerful hardware resources and a simple processing procedure, transaction fees are very low.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-bg text-center text-gray-400 py-6 text-sm">
+© 2025 Concilium Foundation. All rights reserved.
+</footer>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+</body>
+</html>
